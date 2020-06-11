@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .carousel {
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: #444;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .carousel-images img {
+            width: 100%;
+            /* height: 500px; */
+        }
+
+        .carousel-images li {
+            float: left;
+        }
+
+        .control {
+            width: 50px;
+            height: 50px;
+            background-color: #444;
+            /* 绝对定位会脱离文档流，她相对于position: relative进行定位 */
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px;
+            padding-bottom: 5px;
+            opacity: .5;
+        }
+
+        .pre {
+            left: 5px;
+        }
+
+        .next {
+            right: 5px;
+        }
+
+        .count {
+            width: 60px;
+            height: 15px;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            margin-left: -30px;
+            text-align: center;
+        }
+
+        .count ul li {
+            float: left;
+            width: 15px;
+            height: 15px;
+            background-color: #444;
+            border-radius: 50%;
+            margin-right: 5px;
+            opacity: .5;
+            cursor: pointer;
+        }
+
+        /* css权重计算，id最高，class=10，标签=1 */
+        .count .active {
+            background-color: aqua;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="carousel">
+        <ul class="carousel-images">
+            <li><a href="#"><img src="/images/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="/images/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="/images/3.jpg" alt=""></a></li>
+        </ul>
+        <div class="pre control"> &#139 </div>
+        <div class="next control"> &#155 </div>
+        <div class="count">
+            <ul>
+                <li class="active"> <a href=""></a></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
