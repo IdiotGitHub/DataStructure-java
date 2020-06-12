@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        min-width: 600px;
+    }
+    .contariner {
+        width: 100%;
+
+    }
+    .left {
+        float: left;
+        /* position:left; */
+        width: 200px;
+        height: 200px;
+        margin-right: -200px;
+        background-color: antiquewhite;
+        /* position: relative; */
+    }
+    .right {
+        float: left;
+        width: 100%;
+        height: 200px;
+        /* margin-left给负值的话，这个元素左侧的兄弟元素会向右移动 又因为设置了浮动，所以此元素会脱离文档流，所以会盖住left，想要要left出来，可以给left设置relative相对定位，让left获取文档流*/
+        margin-left: 200px;
+        background-color: antiquewhite;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>
